@@ -1,0 +1,612 @@
+/*  -- RESET CSS -- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'source-sans-pro';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./fonts/source-sans-pro/SourceSansPro-Regular.otf') format('opentype');;
+}
+
+@font-face {
+    font-family: 'source-sans-pro_bold';
+    font-style :normal;
+    font-weight: bold;
+    src: url('./fonts/source-sans-pro/SourceSansPro-Bold.otf') format('opentype');;
+}
+
+@font-face {
+    font-family: 'source-sans-pro_semibold';
+    font-style :normal;
+    font-weight: 600;
+    src: url('./fonts/source-sans-pro/SourceSansPro-Semibold.otf') format('opentype');;
+}
+
+
+/* holberton */
+
+@font-face {
+    font-family: 'holberton_school-icon';
+    src:  url('fonts/holberton_school-icon.eot?sq4eq4');
+    src:  url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+      url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+      url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+      url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'holberton_school-icon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+}
+
+.holberton_school-icon-ic_video:before {
+    content: "\e910";
+}
+
+.holberton_school-icon-ic_music:before {
+    content: "\e90d";
+}
+
+.holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+}
+
+.holberton_school-icon-ic_facebook:before {
+    content: "\e908";
+}
+
+.holberton_school-icon-ic_instagram:before {
+    content: "\e90a";
+}
+
+.holberton_school-icon-ic_twitter:before {
+    content: "\e90f";
+}
+
+
+/* VARIABLE */
+
+:root{
+    --color-black : #000000;
+    --color-white : #FFFFFF;
+    --color-blue-navy : #071629;
+    --color-red-light : #FF6565;
+
+    --font-32 : 2rem;
+    --font-16 : 1rem;
+    --font-12 : 0.75rem;
+
+    --police-regular : 'source-sans-pro',sans-serif;
+    --police-bold : 'source-sans-pro_bold',sans-serif;
+    --police-semibold : "source-sans-pro_semibold",sans-serif;
+
+    --nav-height : 2rem;
+    --max-contend-width: 1000px;
+    --margin-elements : 2rem 0; 
+    --section-padding : 1.2rem;
+    --line-height : 26px;
+}
+
+/* LAYOUT */
+
+body{
+    font-family: var(--police-regular);
+    color: var(--color-blue-navy);
+    background-color: var(--color-white);
+    font-size: var(--font-16);
+}
+
+.container{
+    max-width: var(--max-contend-width);
+    width: 100%;
+}
+
+/* Class utilitaire */
+
+.title{
+    font-family: var(--police-semibold);
+    font-size: var(--font-32);
+    margin: var(--margin-elements);
+    margin-bottom: 0;
+}
+
+.sub-title{
+    font-family: var(--police-bold);
+    font-size: var(--font-16);
+}
+
+.text{
+    margin: var(--margin-elements);
+    line-height: var(--line-height);
+}
+
+.btn-cta{
+    width: 10.125rem;
+    height: 2.75rem;
+    border-radius: 1.375rem;
+    border: none;
+    color: var(--color-white);
+    background-color: var(--color-red-light);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--police-bold);
+}
+
+.btn-cta:hover,
+.btn-cta:active{
+    opacity: 0.9 !important;
+}
+
+.link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link:hover,
+.link:active{
+    color: var(--color-red-light) !important;
+}
+
+@media (width > 480px) {
+    .text{
+        padding: 0 1.5rem;
+    }
+}
+
+/* HEADER */
+
+header#hero-section{
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(7,22,41,1) 10%, rgba(41,48,61,0) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+header#hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Menu */
+
+nav.main-menu {
+    display: flex;
+    flex-direction: row;
+    padding: 1.875rem 0;
+}
+
+nav.main-menu .menu-links{
+    flex: 5;
+    margin-bottom: 15rem;
+}
+
+.menu-links .menu-nav{
+    display: none;
+    cursor: pointer;
+}
+
+.menu-links .menu-nav .link{
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: var(--font-12);
+    font-family: var(--police-bold);
+    margin: 2rem 0;
+}
+
+
+
+.menu-links .menu-nav .link:hover,
+.menu-links .menu-nav .link:active{
+    color: var(--color-red-light);
+}
+
+.menu-links .menu-logo{
+    text-align: center;
+    height: var(--nav-height);
+    cursor: pointer;
+}
+
+.menu-links .menu-logo img{
+    width: max-content;
+    height: var(--nav-height);
+}
+
+/* Mobile menu */
+
+nav.main-menu label[for="mobile_menu"]{
+    height: var(--nav-height);
+    background-color: transparent;
+    color: var(--color-white);
+    display: block;
+    cursor: pointer;
+    flex: 1;
+}
+
+nav.main-menu input#mobile_menu{
+    display: none;
+}
+
+input#mobile_menu:checked ~ .menu-links{
+    margin-bottom: calc(15rem - (2rem*3));
+}
+
+input#mobile_menu:checked ~ .menu-links .menu-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input#mobile_menu {
+    transition: rotate 0.3s, opacity 0.1s, y 0.3s,x 0.3s, display 0.3s;
+}
+
+input#mobile_menu:checked ~ label[for="mobile_menu"] .burger-icon .rect-top{
+    rotate: 45deg;
+    y: 10px;
+    x: 30px
+}
+
+input#mobile_menu:checked ~ label[for="mobile_menu"] svg.burger-icon rect.rect-middle{
+    opacity: 0;
+}
+
+input#mobile_menu:checked ~ label[for="mobile_menu"] svg.burger-icon rect.rect-bottom{
+    rotate: -45deg;
+    y: 60px;
+    x: -49px
+}
+
+.burger-icon {
+    width : 100%;
+    height: var(--nav-height);
+}
+
+.icon-rect-full{
+    width: 70%;
+    height: 7%;
+    fill: var(--color-white);
+}
+
+.icon-rect-middle{
+    width: 40%;
+    height: 7%;
+    fill: var(--color-white);
+}
+
+
+/* Hero section*/
+
+.hero-section{
+    color: var(--color-white);
+    text-align: center;
+    padding: var(--section-padding);
+    padding-bottom: 2rem;
+}
+
+.hero-section .text,
+.hero-section .btn-cta,
+.hero-section .sub-title{
+    margin: 1.2rem 0;
+}
+
+
+@media (width > 480px) {
+
+    header#hero-section{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-image: none;
+    }
+
+    input#mobile_menu,
+    label[for="mobile_menu"]{
+        display: none !important;
+    }
+
+    nav.main-menu .menu-links{
+        flex: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--section-padding);
+    }
+
+    .menu-links .menu-logo{
+        text-align: left;
+    }
+
+    .menu-links .menu-nav{
+        display: inline-block;
+    }
+
+    .menu-links .menu-nav .link{
+        margin: 0 2rem;
+    }
+
+
+}
+
+
+/* Section : What we do */
+
+section#what_we_do{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: var(--section-padding);
+}
+
+section#what_we_do .cards{
+    margin: var(--margin-elements);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+section#what_we_do .cards .card{
+    margin: var(--margin-elements);
+    flex: auto;
+    width: 12.938rem;
+    height: 11.25rem;
+}
+
+section#what_we_do .cards .card .card-text .sub-title{
+    margin-bottom: 1rem;
+}
+
+section#what_we_do .cards .card .card-text p{
+    line-height: var(--line-height);
+}
+
+section#what_we_do [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"]{
+    font-size: 4.5rem;
+    color: var(--color-red-light);
+}
+
+
+@media (width > 480px) {
+
+    section#what_we_do .cards{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    section#what_we_do .cards .card{
+        padding: 1rem;
+    }
+
+}
+
+/* Results */
+
+section#results{
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(7,22,41,1) 10%, rgba(41,48,61,0) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--section-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+}
+
+section#results::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/headphones_hero_2.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+
+section#results .cards{
+    margin: var(--margin-elements);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+section#results .cards .card{
+    margin: 1rem auto;
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 11.5rem;
+    width: 12.5rem;
+}
+
+section#results .card .card-pentagone{
+    background-image: url(./img/pentagone.png);
+    background-size: cover;
+    height: 11.5rem;
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section#results .card .card-pentagone span{
+    display: inline-block;
+}
+
+section#results .card .card-pentagone span.percentage{
+    font-size: 2.875rem;
+    font-family: var(--police-bold);
+}
+
+section#results .card .card-pentagone span.text{
+    margin: 0;
+    font-size: 0.875rem;
+    padding-top: 1rem;
+}
+
+@media (width > 480px) {
+
+    section#results .cards{
+        flex-direction: row;
+        width: 100%;
+    }
+
+    section#results .cards .card{
+        padding: 1rem 1.5rem;
+        width: 11.5rem;
+    }
+}
+
+
+/* Contact */
+
+section#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--section-padding);
+    margin: 5rem 0;
+}
+
+section#contact .title{
+    text-align: center;
+}
+
+section#contact form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#contact form fieldset{
+    margin: 2rem 0;
+    width: 100%;
+}
+
+section#contact form .form-groupe{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+section#contact form input{
+    margin: .5rem 0;
+    border: none;
+    border-bottom: 1px solid #979797;
+    height: 2rem;
+    transition: height 0.5ms;
+}
+
+section#contact form input:focus-visible{
+    outline: none;
+    height: 2.5rem;
+}
+
+section#contact form input::placeholder{
+    font-size: 0.875rem;
+    font-family: var(--police-semibold);
+    color: var(--color-blue-navy);
+}
+
+
+@media (width > 480px) {
+
+    section#contact form fieldset{
+        width: 35%;
+    }
+}
